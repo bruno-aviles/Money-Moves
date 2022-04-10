@@ -1,4 +1,6 @@
-
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 :root{
     /* Color Scheme */
@@ -11,5 +13,9 @@
 
     --grey01-color: #C0C0C0;
     --grey02-color: #E8E8E8;
-    --grey03-color: #F9F9F9;    
+    --grey03-color: #F9F9F9; 
+    
+    /* Typography */
+    --font01-font-family: 'Faster One', cursive;
+    --font02-font-family: 'Play', sans-serif;
 }
