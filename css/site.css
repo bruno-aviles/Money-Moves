@@ -19,3 +19,40 @@
     --font01-font-family: 'Faster One', cursive;
     --font02-font-family: 'Play', sans-serif;
 }
+html {
+    font-size: 16px;
+}
+body{
+    padding: 1rem;
+    border: solid 1px black;
+}
+
+header{
+    height: 10rem;
+    background-color: var(--primary01-color);
+    text-align: center;
+    border-radius: .5rem;
+
+    position: relative;
+}
+
+.logoHeader{
+    /* centering text vertical & horizontal*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    font-family: var(--font01-font-family);
+    font-size: 4.5rem;
+    padding: 1rem;
+    color: var(--primary04-color);
+}
+
+/* Desktop Media Query */
+@media all and (min-width: 1024px) {
+    .logoHeader {font-size: 6rem;}  
+}
+
+
