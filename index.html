@@ -12,10 +12,42 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/site.css">
     </head>
-    <body>
+    <body class="container-fluid">
         <!-- Header Logo -->
         <header>
             <h1 class="logoHeader">MONEY MOVE$$$</h1>
         </header>
+
+        <!-- App Layout -->
+        <div class="row mt-3">
+            <!-- Loan Details -->
+            <div class="col">
+                <h2 class="text-center fw-bold font02">Loan Details</h2>
+                <div class="container d-flex flex-column">
+                    <!-- Loan Amount -->
+                    <div class="align-self-center mt-4">
+                        <label for="loanAmount" class="form-label font02">Loan Amount</label>
+                        <input type="number" class="form-control inputStyle" id="loanAmount" name="Loan Amount" aria-label="Loan Amount">
+                    </div>
+                    <!-- Loan Term -->
+                    <div class="align-self-center mt-4">
+                        <label for="loanTerm" class="form-label font02">Term (Months)</label>
+                        <input type="number" class="form-control inputStyle" id="loanTerm" name="Loan Term" aria-label="Loan Term">
+                    </div>
+                    <!-- Interest Rate -->
+                    <div class="align-self-center mt-4">
+                        <label for="interestRate" class="form-label font02">Interest Rate</label>
+                        <input type="number" class="form-control inputStyle" id="interestRate" name="Interest Rate" aria-label="Interest Rate">
+                    </div>
+                    <!-- Calculate Button -->
+                    <div class="calculateButtonContainer align-self-center d-flex justify-content-end">
+                        <button type="button" id="calculate" class="btn btn-warning btn-lg mt-3 font02">Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Payments -->
+            <div class="col"></div>
+        </div>
     </body>
 </html>

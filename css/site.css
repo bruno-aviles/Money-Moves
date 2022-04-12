@@ -24,6 +24,7 @@ html {
 }
 body{
     padding: 1rem;
+    background-color: var(--grey03-color);
     border: solid 1px black;
 }
 
@@ -48,6 +49,25 @@ header{
     font-size: 4.5rem;
     padding: 1rem;
     color: var(--primary04-color);
+}
+
+.inputStyle {
+    width: 25rem;
+    background-color: var(--grey02-color);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius: .625rem;
+}
+
+button{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.calculateButtonContainer{
+    width: 25rem;
+}
+
+.font02 {
+    font-family: var(--font02-font-family);
 }
 
 /* Desktop Media Query */
