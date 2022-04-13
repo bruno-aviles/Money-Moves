@@ -16,8 +16,9 @@
     --grey03-color: #F9F9F9; 
     
     /* Typography */
-    --font01-font-family: 'Faster One', cursive;
-    --font02-font-family: 'Play', sans-serif;
+    --font01: 'Faster One', cursive;
+    --font02: 'Play', sans-serif;
+    --font02-Bold: 700;
 }
 html {
     font-size: 16px;
@@ -45,10 +46,14 @@ header{
     transform: translate(-50%, -50%);
 
     width: 100%;
-    font-family: var(--font01-font-family);
+    font-family: var(--font01);
     font-size: 4.5rem;
     padding: 1rem;
     color: var(--primary04-color);
+}
+
+h2, h3, label{
+    font-family: var(--font02);
 }
 
 .inputStyle {
@@ -59,6 +64,7 @@ header{
 }
 
 button{
+    font-family: var(--font02);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -66,8 +72,65 @@ button{
     width: 25rem;
 }
 
-.font02 {
-    font-family: var(--font02-font-family);
+.displayMonthly{
+    font-family: var(--font02);
+    font-weight: var(--font02-Bold);
+    color: var(--primary02-color);
+    text-align: center;
+    
+    position: relative;
+}
+
+.displayMonthly::before{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 64px;
+    border-radius: 100px;
+    background-color: var(--primary02-color);
+
+    position: absolute;
+    top:50%;
+    left: 25%;
+}
+.displayMonthly::after{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 64px;
+    border-radius: 100px;
+    background-color: var(--primary02-color);
+
+    position: absolute;
+    top:50%;
+    right: 25%;
+}
+
+.displayContainer{
+    width: 40rem;
+    height: 15rem;
+    background-color: var(--primary01-color);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.amountDisplay{
+    background-color: var(--grey03-color);
+    height: 100%;
+    width: fit-content;
+    min-width: 12rem;
+    padding: 0 1rem;
+    margin-left: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    position: relative;
+}
+.amount{
+    /* centering numbers vertical & horizontal*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Desktop Media Query */

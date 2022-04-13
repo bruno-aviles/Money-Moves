@@ -22,32 +22,75 @@
         <div class="row mt-3">
             <!-- Loan Details -->
             <div class="col">
-                <h2 class="text-center fw-bold font02">Loan Details</h2>
+                <h2 class="text-center fw-bold">Loan Details</h2>
                 <div class="container d-flex flex-column">
                     <!-- Loan Amount -->
                     <div class="align-self-center mt-4">
-                        <label for="loanAmount" class="form-label font02">Loan Amount</label>
+                        <label for="loanAmount" class="form-label">Loan Amount</label>
                         <input type="number" class="form-control inputStyle" id="loanAmount" name="Loan Amount" aria-label="Loan Amount">
                     </div>
                     <!-- Loan Term -->
                     <div class="align-self-center mt-4">
-                        <label for="loanTerm" class="form-label font02">Term (Months)</label>
+                        <label for="loanTerm" class="form-label">Term (Months)</label>
                         <input type="number" class="form-control inputStyle" id="loanTerm" name="Loan Term" aria-label="Loan Term">
                     </div>
                     <!-- Interest Rate -->
                     <div class="align-self-center mt-4">
-                        <label for="interestRate" class="form-label font02">Interest Rate</label>
+                        <label for="interestRate" class="form-label">Interest Rate</label>
                         <input type="number" class="form-control inputStyle" id="interestRate" name="Interest Rate" aria-label="Interest Rate">
                     </div>
                     <!-- Calculate Button -->
                     <div class="calculateButtonContainer align-self-center d-flex justify-content-end">
-                        <button type="button" id="calculate" class="btn btn-warning btn-lg mt-3 font02">Calculate</button>
+                        <button type="button" id="calculate" class="btn btn-warning btn-lg mt-3">Calculate</button>
                     </div>
                 </div>
             </div>
 
             <!-- Monthly Payments -->
-            <div class="col"></div>
+            <div class="col"> 
+                <h2 class="text-center fw-bold font02">Your Monthly Payments</h2>
+                <!-- Monthly Payment Display -->
+                <div class="container mt-5">
+                    <h1 class="displayMonthly">$2,345</h1>
+                </div>
+                <!-- Total Display -->
+                <div class="container d-flex flex-column justify-content-evenly mt-4 p-3 displayContainer">
+                    <!-- Total Principal -->
+                    <div class="row row-cols-2">
+                        <div class="col ps-5">
+                            <h3>Total Principal:</h3>                     
+                        </div>
+                        <div class="col pe-5">
+                            <div class="amountDisplay rounded-pill">
+                                <h3 class="amount">$25,000.00</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Total Interest -->
+                    <div class="row row-cols-2">
+                        <div class="col ps-5">
+                            <h3>Total Interest:</h3>                     
+                        </div>
+                        <div class="col pe-5">
+                            <div class="amountDisplay rounded-pill">
+                                <h3 class="amount">$3,306.85</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Total Cost -->
+                    <div class="row row-cols-2">
+                        <div class="col ps-5">
+                            <h3 class="fw-bold">Total Cost:</h3>                     
+                        </div>
+                        <div class="col pe-5">
+                            <div class="amountDisplay rounded-pill">
+                                <h3 class="amount fw-bold">$28,306.85</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </body>
 </html>
