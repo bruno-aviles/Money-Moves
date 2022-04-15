@@ -81,6 +81,14 @@ button{
     width: 25rem;
 }
 
+/* Line Seperator */
+.vertLine{
+    width: auto;
+    border: solid 1px black;
+    border-radius: 50px;
+    padding: 0;
+}
+
 .displayMonthly{
     font-family: var(--font02);
     font-weight: var(--font02-Bold);
@@ -130,7 +138,7 @@ button{
     min-width: 12rem;
     padding: 0 1rem;
     margin-left: auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
     position: relative;
 }
