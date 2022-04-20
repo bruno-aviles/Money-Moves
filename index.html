@@ -12,169 +12,171 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/site.css">
     </head>
-    <body class="container-fluid">
+    <body>
         <!-- Header Logo -->
         <header>
             <h1 class="logoHeader">MONEY MOVE$$$</h1>
         </header>
 
-        <!-- Loan Calculator -->
-        <section class="calculatorSection row mt-3">
-            <!-- Loan Details -->
-            <div class="col">
-                <h2 class="text-center fw-bold">Loan Details</h2>
-                <div class="container d-flex flex-column">
-                    <!-- Loan Amount -->
-                    <div class="align-self-center mt-4">
-                        <label for="loanAmount" class="form-label">Loan Amount</label>
-                        <input type="number" class="form-control inputStyle" id="loanAmount" name="Loan Amount" aria-label="Loan Amount">
-                    </div>
-                    <!-- Loan Term -->
-                    <div class="align-self-center mt-4">
-                        <label for="loanTerm" class="form-label">Term (Months)</label>
-                        <input type="number" class="form-control inputStyle" id="loanTerm" name="Loan Term" aria-label="Loan Term">
-                    </div>
-                    <!-- Interest Rate -->
-                    <div class="align-self-center mt-4">
-                        <label for="interestRate" class="form-label">Interest Rate</label>
-                        <input type="number" class="form-control inputStyle" id="interestRate" name="Interest Rate" aria-label="Interest Rate">
-                    </div>
-                    <!-- Calculate Button -->
-                    <div class="calculateButtonContainer align-self-center d-flex justify-content-end">
-                        <button type="button" id="calculate" class="btn btn-warning btn-lg mt-3">Calculate</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seperator -->
-            <div class="vertLine mb-3"></div>
-
-            <!-- Monthly Payments -->
-            <div class="col"> 
-                <h2 class="text-center fw-bold font02">Your Monthly Payments</h2>
-                <!-- Monthly Payment Display -->
-                <div class="container mt-5">
-                    <h1 class="displayMonthly">$2,345</h1>
-                </div>
-                <!-- Total Display -->
-                <div class="container d-flex flex-column justify-content-evenly mt-4 p-3 displayContainer">
-                    <!-- Total Principal -->
-                    <div class="row row-cols-2">
-                        <div class="col ps-5">
-                            <h3>Total Principal:</h3>                     
-                        </div>
-                        <div class="col pe-5">
-                            <div class="amountDisplay rounded-pill">
-                                <h3 class="amount">$25,000.00</h3>
+        <main class="row row-cols-1 gy-3 gx-0">
+            
+            <!-- Loan Calculator -->
+            <section class="col-12">
+                <div class="calculatorSection row gx-0">
+                    <!-- Loan Details -->
+                    <div class="col-12 col-lg-6 p-5 horBorder">
+                        <h2 class="text-center fw-bold">Loan Details</h2>
+                        <div class="container d-flex flex-column">
+                            <!-- Loan Amount -->
+                            <div class="align-self-center mt-4">
+                                <label for="loanAmount" class="form-label">Loan Amount</label>
+                                <input type="number" class="form-control inputStyle" id="loanAmount" name="Loan Amount" aria-label="Loan Amount">
+                            </div>
+                            <!-- Loan Term -->
+                            <div class="align-self-center mt-4">
+                                <label for="loanTerm" class="form-label">Term (Months)</label>
+                                <input type="number" class="form-control inputStyle" id="loanTerm" name="Loan Term" aria-label="Loan Term">
+                            </div>
+                            <!-- Interest Rate -->
+                            <div class="align-self-center mt-4">
+                                <label for="interestRate" class="form-label">Interest Rate</label>
+                                <input type="number" class="form-control inputStyle" id="interestRate" name="Interest Rate" aria-label="Interest Rate">
+                            </div>
+                            <!-- Calculate Button -->
+                            <div class="calculateButtonContainer align-self-center d-flex justify-content-end">
+                                <button type="button" id="calculate" class="btn btn-warning btn-lg mt-3">Calculate</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Total Interest -->
-                    <div class="row row-cols-2">
-                        <div class="col ps-5">
-                            <h3>Total Interest:</h3>                     
+    
+                    <!-- Monthly Payments -->
+                    <div class="col-12 col-lg-6 p-5 vertBorder"> 
+                        <h2 class="text-center fw-bold font02">Your Monthly Payments</h2>
+                        <!-- Monthly Payment Display -->
+                        <div class="container mt-5">
+                            <h1 class="displayMonthly">$2,345</h1>
                         </div>
-                        <div class="col pe-5">
-                            <div class="amountDisplay rounded-pill">
-                                <h3 class="amount">$3,306.85</h3>
+                        <!-- Total Display -->
+                        <div class="container d-flex flex-column justify-content-evenly mt-4 p-3 displayContainer">
+                            <!-- Total Principal -->
+                            <div class="row gy-0 gx-0 mb-2">
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <h3>Total Principal:</h3v>                     
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <div class="amountDisplay rounded-pill">
+                                        <h3 class="amount">$25,000.00</h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Total Cost -->
-                    <div class="row row-cols-2">
-                        <div class="col ps-5">
-                            <h3 class="fw-bold">Total Cost:</h3>                     
-                        </div>
-                        <div class="col pe-5">
-                            <div class="amountDisplay rounded-pill">
-                                <h3 class="amount fw-bold">$28,306.85</h3>
+                            <!-- Total Interest -->
+                            <div class="row gy-0 gx-0 mb-2">
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <h3>Total Interest:</h3>                     
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <div class="amountDisplay rounded-pill">
+                                        <h3 class="amount">$3,306.85</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Total Cost -->
+                            <div class="row gy-0 gx-0 mb-2">
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <h3 class="fw-bold">Total Cost:</h3>                     
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
+                                    <div class="amountDisplay rounded-pill">
+                                        <h3 class="amount fw-bold">$28,306.85</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- App/Loan Info -->
-        <section class="aboutSection p-3">
-            <div class="row">
-                <!-- App Info -->
-                <div class="col p-3 text-center">
-                    <h3>
-                        Thinking of getting a loan? Plan now and pay later using <span class="logoFont">Money Move$$$</span> to estimate the interest charges and monthly payments from your desired loan amount. Take control and make money move for you!
-                    </h3>
-                </div>
+            </section>
+            
+            <!-- App Info -->
+            <section class="col-12 p-3">
+                <h4 class="text-center">
+                    Thinking of getting a loan? Plan now and pay later using <span class="logoFont">Money Move$$$</span> to estimate the interest charges and monthly payments from your desired loan amount. Take control and make money move for you!
+                </h4>
+            </section>
+            
+            <!-- Loan Info -->
+            <section class="col-12 p-4 loanInfo">
                 <!-- Table Display -->
-                <div class="row">
-                    <div class="col d-flex">
-                        <table class="table table-borderless">
-                            <thead>
-                                <th scope="col">Month</th>
-                                <th scope="col">Payment</th>
-                                <th scope="col">Principal</th>
-                                <th scope="col">Interest</th>
-                                <th scope="col">Total Interest</th>
-                                <th scope="col">Balance</th>
-                            </thead>
-                            <tbody id="tableResults">
-                                <!-- Loan Info -->
-                                <tr class="oddRow">
-                                    <td>1</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                                <tr class="evenRow">
-                                    <td>2</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                                <tr class="oddRow">
-                                    <td>3</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                                <tr class="evenRow">
-                                    <td>4</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                                <tr class="oddRow">
-                                    <td>5</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                                <tr class="evenRow">
-                                    <td>6</td>
-                                    <td>$471.78</td>
-                                    <td>$471.78</td>
-                                    <td>$104.17</td>
-                                    <td>$104.17</td>
-                                    <td>$2463.17</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <thead>
+                            <th scope="col">Month</th>
+                            <th scope="col">Payment</th>
+                            <th scope="col">Principal</th>
+                            <th scope="col">Interest</th>
+                            <th scope="col">Total Interest</th>
+                            <th scope="col">Balance</th>
+                        </thead>
+                        <tbody id="tableResults">
+                            <!-- Loan Info -->
+                            <tr class="oddRow">
+                                <td>1</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                            <tr class="evenRow">
+                                <td>2</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                            <tr class="oddRow">
+                                <td>3</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                            <tr class="evenRow">
+                                <td>4</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                            <tr class="oddRow">
+                                <td>5</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                            <tr class="evenRow">
+                                <td>6</td>
+                                <td>$471.78</td>
+                                <td>$471.78</td>
+                                <td>$104.17</td>
+                                <td>$104.17</td>
+                                <td>$2463.17</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </section>
+
+            </section>
+
+        </main>
+        
 
         <!-- Footer -->
-        <footer>
+        <footer class="border border-secondary">
             <p>2022 | <a href="#">brunoaviles.tech</a>
         </footer>
         
