@@ -27,7 +27,6 @@ html {
 body{
     padding-bottom: 0;
     background-color: var(--grey02-color);
-    border: solid 1px black;
     min-height: 100vh;
     
     display: flex;

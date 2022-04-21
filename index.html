@@ -29,7 +29,7 @@
                         <div class="container d-flex flex-column">
                             <!-- Loan Amount -->
                             <div class="align-self-center mt-4">
-                                <label for="loanAmount" class="form-label">Loan Amount</label>
+                                <label for="loanAmount" class="form-label">Loan Amount ($)</label>
                                 <input type="number" class="form-control inputStyle" id="loanAmount" name="Loan Amount" aria-label="Loan Amount">
                             </div>
                             <!-- Loan Term -->
@@ -39,7 +39,7 @@
                             </div>
                             <!-- Interest Rate -->
                             <div class="align-self-center mt-4">
-                                <label for="interestRate" class="form-label">Interest Rate</label>
+                                <label for="interestRate" class="form-label">Interest Rate (%)</label>
                                 <input type="number" class="form-control inputStyle" id="interestRate" name="Interest Rate" aria-label="Interest Rate">
                             </div>
                             <!-- Calculate Button -->
@@ -54,7 +54,7 @@
                         <h2 class="text-center fw-bold font02">Your Monthly Payments</h2>
                         <!-- Monthly Payment Display -->
                         <div class="container mt-5">
-                            <h1 class="displayMonthly">$0</h1>
+                            <h1 class="displayMonthly" id="monthlyPayment">$0</h1>
                         </div>
                         <!-- Total Display -->
                         <div class="container d-flex flex-column justify-content-evenly mt-4 p-3 displayContainer">
@@ -149,5 +149,11 @@
         <!-- Bootstrap JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
+        <!-- Custom JavaScript -->
+        <script src="/js/site.js"></script>
+
+        <script>
+            document.getElementById("calculate").addEventListener("click", monthlyPaymentDisplay)
+        </script>
     </body>
 </html>
