@@ -54,7 +54,7 @@
                         <h2 class="text-center fw-bold font02">Your Monthly Payments</h2>
                         <!-- Monthly Payment Display -->
                         <div class="container mt-5">
-                            <h1 class="displayMonthly">$2,345</h1>
+                            <h1 class="displayMonthly">$0</h1>
                         </div>
                         <!-- Total Display -->
                         <div class="container d-flex flex-column justify-content-evenly mt-4 p-3 displayContainer">
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
                                     <div class="amountDisplay rounded-pill">
-                                        <h3 class="amount">$25,000.00</h3>
+                                        <h3 class="amount" id="totalPrincipal">$0.00</h3>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
                                     <div class="amountDisplay rounded-pill">
-                                        <h3 class="amount">$3,306.85</h3>
+                                        <h3 class="amount" id="totalInterest">$0.00</h3>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
                                     <div class="amountDisplay rounded-pill">
-                                        <h3 class="amount fw-bold">$28,306.85</h3>
+                                        <h3 class="amount fw-bold" id="totalCost">$0.00</h3>
                                     </div>
                                 </div>
                             </div>
@@ -97,16 +97,19 @@
             </section>
             
             <!-- App Info -->
-            <section class="col-12 p-3">
+            <section class="col-12 p-3 d-flex flex-column align-items-center">
                 <h4 class="text-center">
                     Thinking of getting a loan? Plan now and pay later using <span class="logoFont">Money Move$$$</span> to estimate the interest charges and monthly payments from your desired loan amount. Take control and make money move for you!
                 </h4>
+                <button class="btn btn-warning btn-lg mt-3 w-50" type="button" data-bs-toggle="collapse" data-bs-target="#loanCollapse" aria-expanded="false" aria-controls="loanCollapse">
+                    View Loan Info
+                </button>
             </section>
             
             <!-- Loan Info -->
-            <section class="col-12 p-4 loanInfo">
+            <section class="col-12 p-4 collapse loanInfo" id="loanCollapse">
                 <!-- Table Display -->
-                <div class="table-responsive">
+                <div class="table-responsive invisible">
                     <table class="table table-borderless">
                         <thead>
                             <th scope="col">Month</th>
@@ -118,60 +121,11 @@
                         </thead>
                         <tbody id="tableResults">
                             <!-- Loan Info -->
-                            <tr class="oddRow">
-                                <td>1</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
-                            <tr class="evenRow">
-                                <td>2</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
-                            <tr class="oddRow">
-                                <td>3</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
-                            <tr class="evenRow">
-                                <td>4</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
-                            <tr class="oddRow">
-                                <td>5</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
-                            <tr class="evenRow">
-                                <td>6</td>
-                                <td>$471.78</td>
-                                <td>$471.78</td>
-                                <td>$104.17</td>
-                                <td>$104.17</td>
-                                <td>$2463.17</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
-
             </section>
-
         </main>
         
 
@@ -179,6 +133,21 @@
         <footer class="border border-secondary">
             <p>2022 | <a href="#">brunoaviles.tech</a>
         </footer>
+
+        <template>
+            <!-- Loan Info -->
+            <tr class="oddRow">
+                <td id="month"></td>
+                <td id="payment"></td>
+                <td id="principal"></td>
+                <td id="interest"></td>
+                <td id="totalInterest"></td>
+                <td id="balance"></td>
+            </tr>
+        </template>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
     </body>
 </html>
