@@ -61,7 +61,7 @@
                             <!-- Total Principal -->
                             <div class="row gy-0 gx-0 mb-2">
                                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
-                                    <h3>Total Principal:</h3v>                     
+                                    <h3>Total Principal:</h3>                     
                                 </div>
                                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-evenly">
                                     <div class="amountDisplay rounded-pill">
@@ -101,7 +101,7 @@
                 <h4 class="text-center">
                     Thinking of getting a loan? Plan now and pay later using <span class="logoFont">Money Move$$$</span> to estimate the interest charges and monthly payments from your desired loan amount. Take control and make money move for you!
                 </h4>
-                <button class="btn btn-warning btn-lg mt-3 w-50" type="button" data-bs-toggle="collapse" data-bs-target="#loanCollapse" aria-expanded="false" aria-controls="loanCollapse">
+                <button id="tableButton" class="btn btn-warning btn-lg mt-3 w-50" type="button" data-bs-toggle="collapse" data-bs-target="#loanCollapse" aria-expanded="false" aria-controls="loanCollapse">
                     View Loan Info
                 </button>
             </section>
@@ -109,7 +109,7 @@
             <!-- Loan Info -->
             <section class="col-12 p-4 collapse loanInfo" id="loanCollapse">
                 <!-- Table Display -->
-                <div class="table-responsive invisible">
+                <div id="tableVisibility" class="table-responsive <!--invisible -->">
                     <table class="table table-borderless">
                         <thead>
                             <th scope="col">Month</th>
@@ -119,7 +119,7 @@
                             <th scope="col">Total Interest</th>
                             <th scope="col">Balance</th>
                         </thead>
-                        <tbody id="tableResults">
+                        <tbody id="tableBody">
                             <!-- Loan Info -->
 
                         </tbody>
@@ -134,9 +134,9 @@
             <p>2022 | <a href="#">brunoaviles.tech</a>
         </footer>
 
-        <template>
+        <template id="templateRow">
             <!-- Loan Info -->
-            <tr class="oddRow">
+            <tr>
                 <td id="month"></td>
                 <td id="payment"></td>
                 <td id="principal"></td>
@@ -153,7 +153,8 @@
         <script src="/js/site.js"></script>
 
         <script>
-            document.getElementById("calculate").addEventListener("click", monthlyPaymentDisplay)
+            document.getElementById("calculate").addEventListener("click", monthlyPaymentDisplay);
+            document.getElementById("tableButton").addEventListener("click", paymentTableDisplay);
         </script>
     </body>
 </html>

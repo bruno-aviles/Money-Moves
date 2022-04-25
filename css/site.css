@@ -214,6 +214,7 @@ table tr:last-child td:last-child{
     border-bottom-right-radius: 20px;
 }
 
+/* row designs */
 .oddRow{
     background-color: var(--grey02-color);
 }
