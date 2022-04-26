@@ -18,8 +18,7 @@
             <h1 class="logoHeader">MONEY MOVE$$$</h1>
         </header>
 
-        <main class="row row-cols-1 gy-3 gx-0">
-            
+        <main class="row row-cols-1 gy-3 gx-0">        
             <!-- Loan Calculator -->
             <section class="col-12">
                 <div class="calculatorSection row gx-0">
@@ -101,15 +100,20 @@
                 <h4 class="text-center">
                     Thinking of getting a loan? Plan now and pay later using <span class="logoFont">Money Move$$$</span> to estimate the interest charges and monthly payments from your desired loan amount. Take control and make money move for you!
                 </h4>
-                <button id="tableButton" class="btn btn-warning btn-lg mt-3 w-50" type="button" data-bs-toggle="collapse" data-bs-target="#loanCollapse" aria-expanded="false" aria-controls="loanCollapse">
+                <button id="tableDisplayButton" class="btn btn-warning btn-lg mt-3 w-50" type="button" data-bs-toggle="collapse" data-bs-target="#loanCollapse" aria-expanded="false" aria-controls="loanCollapse">
                     View Loan Info
                 </button>
             </section>
             
             <!-- Loan Info -->
             <section class="col-12 p-4 collapse loanInfo" id="loanCollapse">
+                <!-- Alert message -->
+                <div id="alertMessage" class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading">Information is needed</h4>
+                    <p>Please fill out your loan details to display your loan payment info</p>
+                </div>
                 <!-- Table Display -->
-                <div id="tableVisibility" class="table-responsive <!--invisible -->">
+                <div id="tableVisibility" class="table-responsive invisible">
                     <table class="table table-borderless">
                         <thead>
                             <th scope="col">Month</th>
@@ -121,22 +125,20 @@
                         </thead>
                         <tbody id="tableBody">
                             <!-- Loan Info -->
-
                         </tbody>
                     </table>
                 </div>
             </section>
-        </main>
-        
+        </main> 
 
         <!-- Footer -->
         <footer class="border border-secondary">
             <p>2022 | <a href="#">brunoaviles.tech</a>
         </footer>
-
+        <!-- Template for table data -->
         <template id="templateRow">
             <!-- Loan Info -->
-            <tr>
+            <tr id="row">
                 <td id="month"></td>
                 <td id="payment"></td>
                 <td id="principal"></td>
@@ -154,7 +156,6 @@
 
         <script>
             document.getElementById("calculate").addEventListener("click", monthlyPaymentDisplay);
-            document.getElementById("tableButton").addEventListener("click", paymentTableDisplay);
         </script>
     </body>
 </html>
