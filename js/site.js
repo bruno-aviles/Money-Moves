@@ -6,6 +6,12 @@ function monthlyPaymentDisplay(){
 
     let monthlyRate = monthlyInterestRate(interestRate);
 
+    // Formatting Numbers to US Currency
+    let dollarUS = Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
+
     // Reset Alert Message
     let alertMessage = document.getElementById("alertMessage").classList;
     alertMessage.remove("invisible");
@@ -55,20 +61,20 @@ function monthlyPaymentDisplay(){
     if(loanAmount > 0 && loanTerm > 0 && interestRate != "" ){
     
         // Display Monthly Payment
-        document.getElementById("monthlyPayment").innerHTML = `$${Number(monthlyPayment.toFixed(2)).toLocaleString("en-US")}`;
+        document.getElementById("monthlyPayment").innerHTML = dollarUS.format(monthlyPayment);
         
         // Total Loan Cost
         let totalCost = totalAmount(loanTerm, monthlyPayment);
         // Display Total Loan Cost
-        document.getElementById("totalCost").innerHTML = `$${Number(totalCost.toFixed(2)).toLocaleString("en-US")}`;
+        document.getElementById("totalCost").innerHTML = dollarUS.format(totalCost);
 
         // Total Interest Cost
         let totalInterestAmount = interestAmount(totalCost, loanAmount);
         // Display Total Interest Cost
-        document.getElementById("totalInterest").innerHTML = `$${Number(totalInterestAmount.toFixed(2)).toLocaleString("en-US")}`;
+        document.getElementById("totalInterest").innerHTML = dollarUS.format(totalInterestAmount);
         
         // Display principal cost
-        document.getElementById("totalPrincipal").innerHTML = `$${Number(loanAmount).toLocaleString("en-US")}`;
+        document.getElementById("totalPrincipal").innerHTML = dollarUS.format(loanAmount);
 
         // Remove Table Visibility and Remove Alert Message
         tableVisibility.remove("invisible");
@@ -127,6 +133,12 @@ function paymentTableInfo(){
     let loanAmount = document.getElementById("loanAmount").value;
     let interestRate = document.getElementById("interestRate").value;
     let monthlyRate = monthlyInterestRate(interestRate);
+
+    // Formatting Numbers to US Currency
+    let dollarUS = Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
     
     // monthly payment formula
     let monthlyPayment = ((Number(loanAmount) * Number(monthlyRate)) * Math.pow(1 + Number(monthlyRate), Number(loanTerm))) / (Math.pow(1 + Number(monthlyRate), Number(loanTerm)) - 1);
@@ -182,30 +194,30 @@ function paymentTableInfo(){
                 // the month(1 corresponding to the 1st month of payment, through the total number of months)
                 rowCols[0].textContent = loanResults.month;
                 // The payment amount
-                rowCols[1].textContent = `$${Number(loanResults.payment.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[1].textContent = dollarUS.format(loanResults.payment);
                 // the principal paid for the month
-                rowCols[2].textContent = `$${Number(loanResults.principal.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[2].textContent = dollarUS.format(loanResults.principal);
                 // interest paid for the month 
-                rowCols[3].textContent = `$${Number(loanResults.interest.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[3].textContent = dollarUS.format(loanResults.interest);
                 // total interest paid to date
-                rowCols[4].textContent = `$${Number(loanResults.totalInterest.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[4].textContent = dollarUS.format(loanResults.totalInterest);
                 // the remaining new balance at the end of the month
-                rowCols[5].textContent = `$${Number(loanResults.balance.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[5].textContent = dollarUS.format(loanResults.balance);
                 
             } else {
                 row.classList.add("oddRow");
                 // the month(1 corresponding to the 1st month of payment, through the total number of months)
                 rowCols[0].textContent = loanResults.month;
                 // The payment amount
-                rowCols[1].textContent = `$${Number(loanResults.payment.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[1].textContent = dollarUS.format(loanResults.payment);
                 // the principal paid for the month
-                rowCols[2].textContent = `$${Number(loanResults.principal.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[2].textContent = dollarUS.format(loanResults.principal);
                 //the interest paid for the month
-                rowCols[3].textContent = `$${Number(loanResults.interest.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[3].textContent = dollarUS.format(loanResults.interest);
                 // total interest paid to date
-                rowCols[4].textContent = `$${Number(loanResults.totalInterest.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[4].textContent = dollarUS.format(loanResults.totalInterest);
                 // the remaining loan balance at the end of the month
-                rowCols[5].textContent = `$${Number(loanResults.balance.toFixed(2)).toLocaleString("en-US")}`;
+                rowCols[5].textContent = dollarUS.format(loanResults.balance);
             }
             tableBody.appendChild(tableRow);
         } 
